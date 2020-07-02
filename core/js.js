@@ -34,11 +34,11 @@ function timeoutPromise (tempo) {
   });
 }
 
-function ajaxPromise (url, dados) {
+function ajaxPromise (url, dados, metodo = 'GET') {
   return new Promise(function (resolve, reject) {
     ajax(url, dados, function (text) {
       resolve(text);
-    });
+    }, metodo);
   });
 }
 

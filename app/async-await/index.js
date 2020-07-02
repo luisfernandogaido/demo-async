@@ -2,14 +2,18 @@ import { timeoutPromise, ajaxPromise } from '../../core/js.js';
 
 async function agendamento () {
   console.log('isso aconteceu antes');
-  await timeoutPromise(1000);
+  await timeoutPromise(2000);
   console.log('isso aconteceu depois de 2 segundos');
 }
 
 async function loadFuncionarios () {
-  const text = await ajaxPromise('../api/funcionarios.php');
-  const funcionarios = JSON.parse(text);
-  console.log(funcionarios);
+  try {
+    const text = await ajaxPromise('../api/funcionarios.php');
+    const funcionarios = JSON.parse(text);
+    console.log(funcionarios);
+  } catch (e) {
+    alert(e);
+  }
 }
 
 async function rodaFolha () {

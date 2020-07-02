@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+main {
+    padding: 1rem;
+}
+
+.botoes {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.botoes button, .botoes a.button {
+    background: #f4f4f4;
+    border: 1px solid transparent;
+    padding: 1rem 1.5rem;
+    margin: 0 1px 2px 0;
+    border-radius: 3px;
+    outline: none;
+    flex: 1 1 100%;
+    font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;
+    text-align: center;
+    color: #222222;
+}
+
+@media (min-width: 768px) {
+    .botoes button, .botoes a.button {
+        flex: 0 1 auto;
+    }
+
+    .botoes.mesmo-tamanho {
+        width: 350px;
+        margin: auto;
+    }
+
+    .botoes.mesmo-tamanho button, .botoes.mesmo-tamanho a.button {
+        flex: 1 1 100%;
+    }
+
+}
+
+.botoes button:hover, .botoes a.button:hover {
+    border-color: #c8c8c8;
+}
+
+.botoes button:active, .botoes a.button:active, .botoes button:focus, .botoes a.button:focus {
+    border-color: #4d90fe;
+}
+
+.botoes button:active, .botoes a.button:active {
+    background-color: #e8e8e8;
+}
